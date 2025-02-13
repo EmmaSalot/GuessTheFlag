@@ -1,6 +1,5 @@
 package com.worldline.quiz
 
-
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.navigation.NavHostController
@@ -8,9 +7,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.wordline.quiz.QuizViewModel
-
-import kotlinx.serialization.Serializable
-
 
 
 @Composable

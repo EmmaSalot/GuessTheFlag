@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
+import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Card
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
@@ -41,7 +42,7 @@ fun scoreScreen(score: Int,total:Int,onResetButtonPushed: () -> Unit,onNewQuizBu
         Card(
             shape = RoundedCornerShape(8.dp),
             modifier = Modifier.padding(10.dp),
-            backgroundColor = Color.Green
+            backgroundColor = Color.LightGray
 
         ) {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -61,7 +62,11 @@ fun scoreScreen(score: Int,total:Int,onResetButtonPushed: () -> Unit,onNewQuizBu
                         modifier = Modifier.padding(all = 20.dp),
                         onClick = {
                             onResetButtonPushed()
-                        }
+                        },
+                        colors = ButtonDefaults.buttonColors(
+                            backgroundColor = Color.Blue,
+                            contentColor = Color.White
+                        )
                     ) {
                         Icon(Icons.Filled.Refresh, contentDescription = "Localized description")
                         Text(text = "Retake the Quiz")
@@ -71,7 +76,11 @@ fun scoreScreen(score: Int,total:Int,onResetButtonPushed: () -> Unit,onNewQuizBu
                         modifier = Modifier.padding(all = 10.dp),
                         onClick = {
                             onNewQuizButtonPushed()
-                        }
+                        },
+                        colors = ButtonDefaults.buttonColors(
+                            backgroundColor = Color.Blue,
+                            contentColor = Color.White
+                        )
                     )
                     {
                         Text("New Quiz")

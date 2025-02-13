@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
+import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Card
 import androidx.compose.material.Icon
 import androidx.compose.material.LinearProgressIndicator
@@ -25,6 +26,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import com.skydoves.landscapist.coil3.CoilImage
@@ -93,7 +95,11 @@ fun questionScreen(questions: List<Question>, onFinishButtonPushed: (Int, Int) -
                     } else {
                         onFinishButtonPushed(score, questions.size)
                     }
-                }
+                },
+                colors = ButtonDefaults.buttonColors(
+                    backgroundColor = Color.Blue,
+                    contentColor = Color.White
+                )
             ) {
                 if(questionProgress < questions.size - 1) nextOrDoneButton(Icons.AutoMirrored.Filled.ArrowForward,"Next")
                 else nextOrDoneButton(Icons.Filled.Done,"Done")
