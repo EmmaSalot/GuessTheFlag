@@ -1,6 +1,5 @@
 package com.worldline.quiz
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -30,10 +29,6 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import com.skydoves.landscapist.coil3.CoilImage
 import com.wordline.quiz.network.data.Question
-import org.jetbrains.compose.resources.DrawableResource
-import org.jetbrains.compose.resources.painterResource
-import quiz.composeapp.generated.resources.Res
-import quiz.composeapp.generated.resources.ad
 
 
 @Composable

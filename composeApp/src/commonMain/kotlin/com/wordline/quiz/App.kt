@@ -48,6 +48,10 @@ fun App(
                     total = it.arguments?.getString("total")?.toInt() ?:-1,
                     onResetButtonPushed = {
                         navController.navigate(route = "/quiz")
+                    },
+                    onNewQuizButtonPushed = {
+                        quizViewModel.refreshQuiz()
+                        navController.navigate(route = "/quiz")
                     }
                 )
             }

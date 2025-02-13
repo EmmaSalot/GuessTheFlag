@@ -27,12 +27,13 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 fun scoreScreenPreview(){
     scoreScreen(
         10, 10,
-        onResetButtonPushed = {}
+        onResetButtonPushed = {} ,
+        onNewQuizButtonPushed={}
     )
 }
 
 @Composable
-fun scoreScreen(score: Int,total:Int,onResetButtonPushed: () -> Unit){
+fun scoreScreen(score: Int,total:Int,onResetButtonPushed: () -> Unit,onNewQuizButtonPushed: () -> Unit){
     Box(
         contentAlignment = Alignment.Center,
         modifier = Modifier.fillMaxWidth().fillMaxHeight()
@@ -65,6 +66,15 @@ fun scoreScreen(score: Int,total:Int,onResetButtonPushed: () -> Unit){
                         Icon(Icons.Filled.Refresh, contentDescription = "Localized description")
                         Text(text = "Retake the Quiz")
 
+                    }
+                    Button(
+                        modifier = Modifier.padding(all = 10.dp),
+                        onClick = {
+                            onNewQuizButtonPushed()
+                        }
+                    )
+                    {
+                        Text("New Quiz")
                     }
                 }
             }

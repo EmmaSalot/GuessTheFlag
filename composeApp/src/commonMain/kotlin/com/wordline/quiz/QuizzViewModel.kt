@@ -28,4 +28,12 @@ class QuizViewModel : ViewModel() {
             }
         }
     }
+
+    fun refreshQuiz() {
+        viewModelScope.launch(Dispatchers.Default) {
+            _questionState.update {
+                quizRepository.updateQuiz()
+            }
+        }
+    }
 }
