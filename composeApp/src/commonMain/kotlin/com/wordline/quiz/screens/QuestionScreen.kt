@@ -37,7 +37,7 @@ import com.wordline.quiz.network.data.Question
 fun questionScreen(questions: List<Question>, onFinishButtonPushed: (Int, Int) -> Unit) {
 
     var questionProgress by remember { mutableStateOf(0) }
-    var selectedAnswer by remember { mutableStateOf(1) }
+    var selectedAnswer by remember { mutableStateOf(-1) }
     var score by remember { mutableStateOf(0) }
 
     Column(
