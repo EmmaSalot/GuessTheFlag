@@ -12,11 +12,13 @@ import androidx.compose.material.Card
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -51,8 +53,9 @@ fun scoreScreen(score: Int,total:Int,onResetButtonPushed: () -> Unit,onNewQuizBu
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
 
                     Text(
-                        fontSize = 15.sp,
-                        text = "score",
+                        fontSize = 35.sp,
+                        fontWeight = FontWeight.Bold,
+                        text = "Score",
                     )
                     Text(
                         fontSize = 30.sp,
@@ -69,7 +72,7 @@ fun scoreScreen(score: Int,total:Int,onResetButtonPushed: () -> Unit,onNewQuizBu
                         )
                     ) {
                         Icon(Icons.Filled.Refresh, contentDescription = "Localized description")
-                        Text(text = "Retake the Quiz")
+                        Text(text = " Retake the Quiz")
 
                     }
                     Button(
@@ -83,7 +86,8 @@ fun scoreScreen(score: Int,total:Int,onResetButtonPushed: () -> Unit,onNewQuizBu
                         )
                     )
                     {
-                        Text("New Quiz")
+                        Icon(Icons.Filled.Add, contentDescription = "Localized description")
+                        Text(" New Quiz")
                     }
                 }
             }
